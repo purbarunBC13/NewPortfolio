@@ -17,7 +17,8 @@ A stunning portfolio website showcasing my projects and skills, built using Reac
 - [License](#license)
 
 ## Demo
-![Screenshot](/images/Portfolioss.png)
+![Screenshot](public/images/Portfolioss.png)
+![Screenshot](public/images/Portfolionight.png)
 
 ## Technologies Used
 - React.js
