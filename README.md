@@ -1,4 +1,4 @@
-Creating a beautiful README file for your React.js portfolio website using Tailwind CSS involves providing clear and concise information along with visually appealing elements. Below is an example structure for your README file:
+Creating a beautiful README file for your React.js portfolio website using Tailwind CSS involves providing clear and concise information along with visually appealing elements:
 
 ---
 
