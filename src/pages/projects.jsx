@@ -7,7 +7,7 @@ const Projects = () => {
       <section className="min-h-screen dark:bg-black px-8 pt-10 flex flex-col items-center gap-10">
         {/* Main head starts here */}
         <div className="lg:w-1/2 flex flex-col items-center gap-10 text-xl 2xl:text-2xl text-center">
-          <h1 className="text-3xl lg:text-5xl 2xl:text-6xl font-bold flex gap-5 text-[#a5b923] dark:text-slate-400">
+          <h1 className="text-3xl lg:text-5xl 2xl:text-6xl font-bold flex gap-2 lg:gap-5 text-[#a5b923] dark:text-slate-400">
             Featured Projects
             <a
               href="https://github.com/purbarunBC13"

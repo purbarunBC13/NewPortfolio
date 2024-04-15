@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <section className="dark:bg-black flex flex-col lg:pt-8 2xl:pt-12 items-center gap-10 h-screen">
+      <section className="dark:bg-black flex flex-col lg:pt-8 2xl:pt-12 items-center justify-center gap-10 h-screen">
         <h1 className="text-4xl 2xl:text-6xl font-bold flex gap-5 text-[#91a31d] dark:text-slate-400 ">
           Contact Me
         </h1>
