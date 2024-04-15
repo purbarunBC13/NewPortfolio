@@ -37,8 +37,8 @@ const Projects = () => {
           <p className="dark:text-slate-400 text-slate-600">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur obcaecati dignissimos, perspiciatis consequatur ab nemo
-            esse perferendis, asperiores voluptates facere necessitatibus
-            dolores <br /> accusantium ut harum amet repudiandae <br /> pariatur
+            esse perferendis, asperiores voluptates facere necessitatibus <br />
+            dolores accusantium ut harum amet repudiandae <br /> pariatur
             officia tenetur.
           </p>
         </div>
@@ -56,7 +56,7 @@ const Projects = () => {
               />
             </div>
             <div className="col-span-3 flex flex-col gap-6 p-10 text-center justify-center">
-              <h1 className="text-3xl 2xl:text-4xl font-bold dark:text-slate-300 text-[#a5b923]">
+              <h1 className="text-2xl lg:text-3xl 2xl:text-4xl font-bold dark:text-slate-300 text-[#a5b923]">
                 Modern Healthcare
               </h1>
               <p className="dark:text-slate-200 text-slate-600">
@@ -83,7 +83,7 @@ const Projects = () => {
           {/* Card 2 starts here */}
           <div className="flex flex-col-reverse lg:grid lg:grid-cols-6">
             <div className="col-span-3 flex flex-col gap-6 p-10 text-center justify-center">
-              <h1 className="text-3xl 2xl:text-4xl font-bold dark:text-slate-300 text-[#a5b923]">
+              <h1 className="text-2xl lg:text-3xl 2xl:text-4xl font-bold dark:text-slate-300 text-[#a5b923]">
                 Full-Stack MERN Application
               </h1>
               <p className="dark:text-slate-200 text-slate-600">

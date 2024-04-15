@@ -1,9 +1,10 @@
 import React from "react";
+import { about } from "../constants/about";
 
 const About = () => {
   return (
     <>
-      <section className="min-h-screen dark:bg-black px-8 pt-10 lg:flex lg:gap-10">
+      <section className="min-h-screen dark:bg-black px-4 lg:px-8 pt-10 lg:flex lg:gap-10">
         <div className="dark:text-slate-400 text-slate-600 lg:w-1/2 flex flex-col gap-8 lg:gap-10 2xl:gap-16 lg:text-xl 2xl:text-2xl">
           <h1 className="text-3xl lg:text-4xl 2xl:text-6xl font-bold dark:text-slate-400 text-[#a5b923]">
             About Me
@@ -108,58 +109,44 @@ const About = () => {
           <h2 className="text-3xl 2xl:text-4xl font-bold dark:text-slate-400 text-[#a5b923]">
             Tech-Stack
           </h2>
-          <div className="flex 2xl:gap-40 lg:gap-20 gap-8">
+          <div className="flex 2xl:gap-40 lg:gap-20 gap-2">
             <ul className="flex flex-col gap-10">
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/react-icon.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                React JS
-              </li>
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/tailwind-icon.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                Tailwind CSS
-              </li>
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/nodejs-icon.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                Node JS
-              </li>
+              {about
+                .filter((item, index) => index < 3)
+                .map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="flex text-lg lg:text-xl items-center gap-4 2xl:gap-8"
+                    >
+                      <img
+                        src={item.source}
+                        alt=""
+                        className="w-14 lg:w-16 2xl:w-20"
+                      />
+                      {item.title}
+                    </li>
+                  );
+                })}
             </ul>
             <ul className="flex flex-col gap-10">
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/springboot-icon.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                SpringBoot
-              </li>
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/python-logo.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                Python
-              </li>
-              <li className="flex text-xl items-center gap-4 2xl:gap-8">
-                <img
-                  src="/images/java-logo.png"
-                  alt=""
-                  className="w-14 lg:w-16 2xl:w-20"
-                />
-                JAVA
-              </li>
+              {about
+                .filter((item, index) => index >= 3)
+                .map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="flex text-lg lg:text-xl items-center gap-4 2xl:gap-8"
+                    >
+                      <img
+                        src={item.source}
+                        alt=""
+                        className="w-14 lg:w-16 2xl:w-20"
+                      />
+                      {item.title}
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </div>

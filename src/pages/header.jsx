@@ -69,11 +69,11 @@ const Header = () => {
       </header>
 
       {/* Mobile nav*/}
-      <nav className="sm:hidden">
+      <nav className="sm:hidden border-b-2">
         <div className="flex justify-between p-2">
           <div className="flex gap-3 items-center">
             <img src="/images/profile-pic.png" alt="" className="w-12 h-12" />
-            <h3 className="text-xl font-bold">My Portfolio</h3>
+            <h3 className="text-xl font-bold text-[#a5b923] dark:text-rose-500">My Portfolio</h3>
           </div>
           <div className="block dark:hidden">
             <MenuIcon

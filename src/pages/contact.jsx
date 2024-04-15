@@ -8,14 +8,14 @@ const Contact = () => {
           Contact Me
         </h1>
         <div className="flex flex-col lg:grid grid-cols-2 lg:h-72 2xl:h-96 lg:w-4/5">
-          <div className="border p-10">
+          <div className="lg:border p-5 lg:p-10">
             <ul className="flex flex-col gap-10">
               <li className="flex items-center gap-8">
                 <img src="/images/gmail.png" alt="" className="w-16 2xl:w-20" />
                 <p className="dark:text-slate-400 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#208323]">
                     Gmail
-                  </strong>{" "}
+                  </strong>
                   <br />
                   purbarunmondal@gmail.com
                 </p>
@@ -29,7 +29,7 @@ const Contact = () => {
                 <p className="dark:text-slate-400 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#297bae]">
                     LinkedIN
-                  </strong>{" "}
+                  </strong>
                   <br />
                   linkedin.com/in/purbarun-mondal-5067a1250
                 </p>
@@ -48,14 +48,14 @@ const Contact = () => {
                 <p className="dark:text-slate-400 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#392191] dark:text-[#7051e1] ">
                     Github
-                  </strong>{" "}
+                  </strong>
                   <br />
                   purbarunBC13
                 </p>
               </li>
             </ul>
           </div>
-          <div className="border bg-[#b7c84c] dark:bg-rose-500 p-10">
+          <div className="lg:border bg-[#b7c84c] dark:bg-rose-500 p-5 lg:p-10">
             <ul className="flex flex-col gap-10">
               <li className="flex items-center gap-8">
                 <img
@@ -66,7 +66,7 @@ const Contact = () => {
                 <p className="dark:text-slate-300 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#132f43] dark:text-[#1b4764] ">
                     TwitterX
-                  </strong>{" "}
+                  </strong>
                   <br />
                   @DevPurbarunOfc
                 </p>
@@ -76,7 +76,7 @@ const Contact = () => {
                 <p className="dark:text-slate-300 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#278546] dark:text-[#6beca9] ">
                     Phone No.
-                  </strong>{" "}
+                  </strong>
                   <br />
                   7076236728
                 </p>
@@ -86,7 +86,7 @@ const Contact = () => {
                 <p className="dark:text-slate-300 font-medium">
                   <strong className="lg:text-xl 2xl:text-2xl text-[#2c6389] dark:text-[#8dd2ff] ">
                     Address
-                  </strong>{" "}
+                  </strong>
                   <br />
                   Kolkata , WestBengal
                 </p>
