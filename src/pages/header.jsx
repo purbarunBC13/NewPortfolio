@@ -1,10 +1,10 @@
-import { Menu, MenuIcon, Moon, Navigation, Sun } from "lucide-react";
+import { MenuIcon, Moon,  Sun } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isOpen, setIsopen] = useState(true);
+  const [isOpen, setIsopen] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
@@ -72,10 +72,19 @@ const Header = () => {
       <nav className="sm:hidden">
         <div className="flex justify-between p-2">
           <div className="flex gap-3 items-center">
-            <img src="/images/profile-pic.png" alt="" className="w-12 h-12"/>
+            <img src="/images/profile-pic.png" alt="" className="w-12 h-12" />
             <h3 className="text-xl font-bold">My Portfolio</h3>
           </div>
-          <div>
+          <div className="block dark:hidden">
+            <MenuIcon
+              color="#a5b923"
+              size={40}
+              onClick={() => {
+                setIsopen(!isOpen);
+              }}
+            />
+          </div>
+          <div className="hidden dark:block">
             <MenuIcon
               color="red"
               size={40}
@@ -86,9 +95,7 @@ const Header = () => {
           </div>
         </div>
         {isOpen && (
-          <div
-            className="xl:hidden absolute w-full h-screen flex flex-col items-center pt-20 dark:bg-black bg-slate-200 text-slate-600 dark:text-slate-400"
-          >
+          <div className="xl:hidden absolute w-full h-screen flex flex-col items-center pt-20 dark:bg-black bg-slate-200 text-slate-600 dark:text-slate-400">
             <ul className="flex flex-col items-center gap-12 text-3xl font-semibold">
               <li
                 className="cursor-pointer hidden dark:block"
@@ -102,24 +109,36 @@ const Header = () => {
               >
                 <Moon color="black" size={30} />
               </li>
-              <li className="dark:hover:text-rose-500 hover:text-[#91a31d]" onClick={() => {
-              setIsopen(!isOpen);
-            }}>
+              <li
+                className="dark:hover:text-rose-500 hover:text-[#91a31d]"
+                onClick={() => {
+                  setIsopen(!isOpen);
+                }}
+              >
                 <Link to="/">Home</Link>
               </li>
-              <li className="dark:hover:text-rose-500 hover:text-[#91a31d]" onClick={() => {
-              setIsopen(!isOpen);
-            }}>
+              <li
+                className="dark:hover:text-rose-500 hover:text-[#91a31d]"
+                onClick={() => {
+                  setIsopen(!isOpen);
+                }}
+              >
                 <Link to="/about">About</Link>
               </li>
-              <li className="dark:hover:text-rose-500 hover:text-[#91a31d]" onClick={() => {
-              setIsopen(!isOpen);
-            }}>
+              <li
+                className="dark:hover:text-rose-500 hover:text-[#91a31d]"
+                onClick={() => {
+                  setIsopen(!isOpen);
+                }}
+              >
                 <Link to="/projects">Work</Link>
               </li>
-              <li className="dark:hover:text-rose-500 hover:text-[#91a31d]" onClick={() => {
-              setIsopen(!isOpen);
-            }}>
+              <li
+                className="dark:hover:text-rose-500 hover:text-[#91a31d]"
+                onClick={() => {
+                  setIsopen(!isOpen);
+                }}
+              >
                 <Link to="/Contact">Contact</Link>
               </li>
             </ul>
