@@ -1,13 +1,32 @@
 import { MenuIcon, Moon,  Sun } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [isOpen, setIsopen] = useState(false);
 
+  const navVariants = {
+    opened: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    closed: {
+      opacity: 1,
+      y: "0%",
+      transition: {
+        delay: 1.1,
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
     document.documentElement.classList.toggle("dark"); // Toggle dark mode globally
     setIsopen(isOpen);
   };
@@ -69,11 +88,17 @@ const Header = () => {
       </header>
 
       {/* Mobile nav*/}
-      <nav className="sm:hidden border-b-2">
+      <motion.nav
+        initial="closed"
+        animate={isOpen ? "opened" : "closed"}
+        className="sm:hidden border-b-2"
+      >
         <div className="flex justify-between p-2">
           <div className="flex gap-3 items-center">
             <img src="/images/profile-pic.png" alt="" className="w-12 h-12" />
-            <h3 className="text-xl font-bold text-[#a5b923] dark:text-rose-500">My Portfolio</h3>
+            <h3 className="text-xl font-bold text-[#a5b923] dark:text-rose-500">
+              My Portfolio
+            </h3>
           </div>
           <div className="block dark:hidden">
             <MenuIcon
@@ -95,7 +120,9 @@ const Header = () => {
           </div>
         </div>
         {isOpen && (
-          <div className="xl:hidden absolute w-full h-screen flex flex-col items-center pt-20 dark:bg-black bg-slate-200 text-slate-600 dark:text-slate-400">
+          <motion.div
+            className="xl:hidden absolute w-full h-screen flex flex-col items-center pt-20 dark:bg-black bg-slate-200 text-slate-600 dark:text-slate-400"
+            variants={navVariants}>
             <ul className="flex flex-col items-center gap-12 text-3xl font-semibold">
               <li
                 className="cursor-pointer hidden dark:block"
@@ -142,9 +169,9 @@ const Header = () => {
                 <Link to="/Contact">Contact</Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
         )}
-      </nav>
+      </motion.nav>
     </>
   );
 };
