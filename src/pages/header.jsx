@@ -88,9 +88,9 @@ const Header = () => {
       </header>
 
       {/* Mobile nav*/}
-      <motion.nav
+      <nav
         initial="closed"
-        animate={isOpen ? "opened" : "closed"}
+        // animate={isOpen ? "opened" : "closed"}
         className="sm:hidden border-b-2"
       >
         <div className="flex justify-between p-2">
@@ -120,7 +120,7 @@ const Header = () => {
           </div>
         </div>
         {isOpen && (
-          <motion.div
+          <div
             className="xl:hidden absolute w-full h-screen flex flex-col items-center pt-20 dark:bg-black bg-slate-200 text-slate-600 dark:text-slate-400"
             variants={navVariants}>
             <ul className="flex flex-col items-center gap-12 text-3xl font-semibold">
@@ -169,9 +169,9 @@ const Header = () => {
                 <Link to="/Contact">Contact</Link>
               </li>
             </ul>
-          </motion.div>
+          </div>
         )}
-      </motion.nav>
+      </nav>
     </>
   );
 };
